@@ -22,7 +22,7 @@ import requests
 from bs4 import BeautifulSoup
 import urllib
 
-
+"""
 def main():
 
     keyword_input = "파이썬"
@@ -74,14 +74,33 @@ def main():
         result = {'link': links, 'title': titles, 'contents': contents, 'agency': agencies, \
                   'date': reporting_dates, 'time': reporting_times}
 
+        df = pd.DataFrame(result)
+
+        df.to_excel("구글결과" + ".xlsx", sheet_name='sheet1')
+
         return result
+
 
     search_word = input('검색어를 입력하세요: ')
     news = google_news_clipping_keyword(search_word, 2)
     print(news['link'])
     print(news['agency'])
+
+
     return
 
 
 if __name__ == '__main__':
     main()
+
+"""
+
+def main():
+
+    return
+
+if __name__ == '__main__':
+
+
+    main()
+
